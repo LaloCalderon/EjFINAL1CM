@@ -36,14 +36,14 @@ public class Main2Activity extends AppCompatActivity {
 
         if(month<10){
             if(day<10){
-                Toast.makeText(Main2Activity.this, "RFC:"+l1+l2+l3+l4+l5+l6+"0"+month+"0"+day, Toast.LENGTH_SHORT).show();
+                Toast.makeText(Main2Activity.this, getResources().getString(R.string.brfc)+l1+l2+l3+l4+l5+l6+getResources().getString(R.string.t0)+month+getResources().getString(R.string.t0)+day, Toast.LENGTH_SHORT).show();
             }else{
-                Toast.makeText(Main2Activity.this, "RFC:"+l1+l2+l3+l4+l5+l6+"0"+month+day, Toast.LENGTH_SHORT).show();}
+                Toast.makeText(Main2Activity.this, getResources().getString(R.string.brfc)+l1+l2+l3+l4+l5+l6+getResources().getString(R.string.t0)+month+day, Toast.LENGTH_SHORT).show();}
         }else{
             if(day<10){
-                Toast.makeText(Main2Activity.this, "RFC:"+l1+l2+l3+l4+l5+l6+month+"0"+day, Toast.LENGTH_SHORT).show();
+                Toast.makeText(Main2Activity.this, getResources().getString(R.string.brfc)+l1+l2+l3+l4+l5+l6+month+getResources().getString(R.string.t0)+day, Toast.LENGTH_SHORT).show();
             }else{
-                Toast.makeText(Main2Activity.this, "RFC:"+l1+l2+l3+l4+l5+l6+month+day, Toast.LENGTH_SHORT).show();
+                Toast.makeText(Main2Activity.this, getResources().getString(R.string.brfc)+l1+l2+l3+l4+l5+l6+month+day, Toast.LENGTH_SHORT).show();
             }
         }
     }
