@@ -35,14 +35,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 if (verificar()){
                     Bundle bundle = new Bundle();
                     bundle.putSerializable("usuario", usuario);
-
-                    //AQUÍ DEBE DE MANDARSE A TRAER LOS VALORES DEL PEACKER PARA MANDARLOS A LA SEGUNDA ACTIVITY PERO NO SÉ COMO!! ):
-                    //onDateSet(DatePicker datePicker, int year, int month, int day);
-
-                    //bundle.putInt("anos", day);
-                    //bundle.putInt("dias", month);
-                    //bundle.putInt("meses", year);
-
+                   
+                    bundle.putInt("anos", aniop);
+                    bundle.putInt("dias", diap);
+                    bundle.putInt("meses", mesp);
+                    
                     Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                     intent.putExtras(bundle);
                     startActivity(intent);
@@ -113,11 +110,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 verificazodiaco(month,day);
                 verificachino(year);
                 verficaedad(day,month,year);
+                diap=day;
+                mesp=month+1;
+                aniop=year;
             }
         });
         newFragment.show(getSupportFragmentManager(), "datePicker");
     }
-
+    int diap; int mesp = 0; int aniop = 0;
     public  boolean isNumeric(String cadena) {
         boolean resultado;
         try {
