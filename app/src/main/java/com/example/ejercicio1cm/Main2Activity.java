@@ -17,16 +17,9 @@ public class Main2Activity extends AppCompatActivity {
         bundle=getIntent().getExtras();
         Usuario usuario=(Usuario) bundle.getSerializable("usuario");
 
-        //String year=bundle.getString("anos");
-        //int month=bundle.getInt("meses");
-        //int day=bundle.getInt("dias");
-
-        final Calendar c = Calendar.getInstance();
-
-        String year = String.valueOf(c.get(Calendar.YEAR));
-        int month = c.get(Calendar.MONTH);
-        int day = c.get(Calendar.DAY_OF_MONTH);
-
+        String year= String.valueOf(bundle.getInt("anos"));
+        int month=bundle.getInt("meses");
+        int day=bundle.getInt("dias");
         char l1=usuario.getApat().toUpperCase().charAt(0);
         char l2=usuario.getApat().toUpperCase().charAt(1);
         char l3=usuario.getAmat().toUpperCase().charAt(0);
